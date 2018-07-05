@@ -14,7 +14,8 @@ import authReducer from './store/reducers/auth';
 
 
 //composeEnhancers and applyMiddleware(thunk) needed to do async code
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+//Redux DevTools will only be available in the development enviroment ( so not everyone can see what's going on once it's deployed)
+const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
 const rootReducer = combineReducers({
   burgerBuilder: burgerBuilderReducer,

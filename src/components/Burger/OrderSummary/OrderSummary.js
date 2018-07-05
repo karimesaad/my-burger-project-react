@@ -7,9 +7,6 @@ import Button from '../../UI/Button/Button';
 //The Modal component controls if OrderSummary should be updated or not.
 
 class OrderSummary extends Component {
-  componentWillUpdate(){
-    console.log("[OrderSummary] WillUpdate");
-  }
 
   render(){
 
